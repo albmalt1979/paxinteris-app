@@ -22,7 +22,7 @@ jobs:
       - name: Install npm dependencies (frontend)
         working-directory: frontend
         run: |
-          npm ci
+          npm install
           npm install -g expo-cli
 
       - name: Expo prebuild (generate native android project)
