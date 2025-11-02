@@ -1,0 +1,34 @@
+{
+  "expo": {
+    "name": "Pax in Teris",
+    "slug": "tournament-manager",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./frontend/assets/icon.png",
+    "splash": {
+      "image": "./frontend/assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.yourorg.tournamentmanager"
+    },
+    "android": {
+      "package": "com.f.a.academy.paxinteris",
+      "adaptiveIcon": {
+        "foregroundImage": "./frontend/assets/icon.png",
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    "web": {
+      "favicon": "./frontend/assets/favicon.png"
+    }
+  }
+}

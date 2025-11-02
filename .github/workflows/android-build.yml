@@ -1,0 +1,33 @@
+name: Android EAS Build
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - name: Install dependencies
+        run: |
+          cd frontend
+          npm ci
+          npm install -g eas-cli
+      - name: Login to Expo
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+        run: |
+          echo "$EXPO_TOKEN" | eas login --token
+      - name: Trigger EAS build (android)
+        env:
+          EAS_BUILD_AUTOMATIC: "1"
+          EAS_ACCESS_TOKEN: ${{ secrets.EAS_ACCESS_TOKEN }}
+        run: |
+          cd frontend
+          eas build -p android --profile production --non-interactive
