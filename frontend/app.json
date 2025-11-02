@@ -4,9 +4,9 @@
     "slug": "tournament-manager",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./frontend/assets/icon.png",
+    "icon": "./assets/icon.png",
     "splash": {
-      "image": "./frontend/assets/splash.png",
+      "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -23,12 +23,12 @@
     "android": {
       "package": "com.f.a.academy.paxinteris",
       "adaptiveIcon": {
-        "foregroundImage": "./frontend/assets/icon.png",
+        "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#FFFFFF"
       }
     },
     "web": {
-      "favicon": "./frontend/assets/favicon.png"
+      "favicon": "./assets/favicon.png"
     }
   }
 }
